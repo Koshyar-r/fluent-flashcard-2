@@ -5,10 +5,48 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/d51f589380.js"></script>
     <title>Fluent Flashcard</title>
 </head>
 <body>
     
+    <div class="question-box">
+        <header>
+            <div class="timer">
+                <div class="time-text"><i class="fa-solid fa-stopwatch"></i></div>
+                <div class="timer-sec">60</div>
+            </div>
+        </header>
+
+        <section>
+            <h1 class="word">Student</h1>
+
+            <div class="question-content">
+                <p class="first">معنی این کلمه چیست؟</p>
+                <p class="second">چگونه تلفظ می شود؟</p>
+
+                <button class="question-btn btn">جواب</button>
+            </div>
+        </section>
+    </div>
+
+    <div class="flashcard">
+        <h2 class="flashcard-word">Student</h2>
+
+        <div class="flashcard-content">
+            <img class="img" src="css/student-removebg-preview.png" alt="">
+            <h1 class="answer">دانش آموز</h1>
+            <p class="phonetic"><span>ˈstudn̩t</span>:فونتیک کلمه</p>
+            <button class="flashcard-btn btn"><i class="fa-solid fa-volume-high"></i> تلفظ کلمه</button>
+        </div>
+
+        <div class="navigate-buttons">
+            <button class="hard">سخت</button>
+            <button class="medium">متوسط</button>
+            <button class="easy">آسان</button>
+        </div>
+    </div>
+
     <script src="js/index.js"></script>
 </body>
 </html>

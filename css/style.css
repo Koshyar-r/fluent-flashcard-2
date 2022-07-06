@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+:root {
+    --persian-font: IRANMarker;
+    --english-font: 'Poppins', sans-serif;
+    --english-font-weight: 500;
+    --persian-font-weight: 600;
+
+    --primary-color: #095af0;
+    --white-color: #FFF;
+}
 @font-face {
     font-family: IRANMarker;
     src: url(IRANMarker.ttf);
@@ -7,4 +16,129 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+::selection {
+    background-color: var(--primary-color);
+    color: #FFF
+}
+body, button {
+    font-family: var(--persian-font);
+    font-weight: var(--persian-font-weight);
+}
+body {
+    background-color: #e5e5e5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border-radius: 3px;
+    width: 150px;
+    font-size: 1rem;
+    padding: 1rem;
+    border: none;
+    outline: none;
+    transition: .5s;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: ;
+    
+}
+.question-box {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 1.7rem;
+    width: 350px;
+    height: 390px;
+    position: relative;
+    transition: 1s;
+    display: none;
+}
+header .timer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90px;
+    height: 45px;
+    background: #29343a;
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 0 8px;
+    user-select: none;
+}
+header .timer .time-text {
+    font-weight: 400;
+    font-size: 25px;
+}
+header .timer .timer-sec {
+    font-family: var(--english-font);
+    font-size: 18px;
+    font-weight: 500;
+    background: var(--primary-color);
+    color: var(--white-color);
+    width: 45px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+}
+.question-box section {
+    padding-top: 2.5rem;
+}
+section .word {
+    font-family: var(--english-font);
+    font-weight: var(--english-font-weight);
+    font-size: 30px;
+    color: var(--primary-color);
+    text-align: center;
+}
+.question-content {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.flashcard {
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 1.7rem;
+    width: 350px;
+    height: 500px;
+    position: relative;
+}
+.flashcard-word {
+    font-family: var(--english-font);
+    font-weight: var(--english-font-weight);
+    text-align: center;
+    font-size: 30px;
+}
+.img {
+    width: 150px;
+    user-select: none;
+}
+.flashcard-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.answer {
+    color: var(--primary-color);
+}
+.phonetic span {
+    font-family: var(--english-font);
+    font-weight: var(--english-font-weight);
+}
+.navigate-buttons {
+    position: absolute;
+    bottom: 0;
 }
