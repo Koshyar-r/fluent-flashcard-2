@@ -6,7 +6,14 @@
     --persian-font-weight: 600;
 
     --primary-color: #095af0;
+    --primary-hover: #0a2d6d;
     --white-color: #FFF;
+    --yellow-color: #ffff00;
+    --yellow-hover: #cfcf05;
+    --green-color: #12cf51;
+    --green-hover: #0e9e3e;
+    --blue-color: #4dcafc;
+    --blue-hover: #1eace4;
 }
 @font-face {
     font-family: IRANMarker;
@@ -45,8 +52,7 @@ body {
     cursor: pointer;
 }
 .btn:hover {
-    background-color: ;
-    
+    background-color: var(--primary-hover);
 }
 .question-box {
     background-color: var(--white-color);
@@ -56,7 +62,6 @@ body {
     height: 390px;
     position: relative;
     transition: 1s;
-    display: none;
 }
 header .timer {
     position: absolute;
@@ -112,8 +117,9 @@ section .word {
     border-radius: 5px;
     padding: 1.7rem;
     width: 350px;
-    height: 500px;
+    height: 600px;
     position: relative;
+    display: none;
 }
 .flashcard-word {
     font-family: var(--english-font);
@@ -122,7 +128,7 @@ section .word {
     font-size: 30px;
 }
 .img {
-    width: 150px;
+    width: 170px;
     user-select: none;
 }
 .flashcard-content {
@@ -130,6 +136,7 @@ section .word {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    gap: 1rem;
 }
 .answer {
     color: var(--primary-color);
@@ -141,4 +148,38 @@ section .word {
 .navigate-buttons {
     position: absolute;
     bottom: 0;
+    display: flex;
+}
+.navigate-buttons button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 1rem;
+    border-radius: 3px;
+    width: 100px;
+}
+.navigate-buttons .hard {
+    background-color: var(--yellow-color);
+    transition: .6s;
+}
+.navigate-buttons .hard:hover {
+    background-color: var(--yellow-hover);
+    transform: scale(1.1);
+}
+.navigate-buttons .medium {
+    background-color: var(--green-color);
+    color: var(--white-color);
+    transition: .6s;
+}
+.navigate-buttons .medium:hover {
+    background-color: var(--green-hover);
+    transform: scale(1.1);
+}
+.navigate-buttons .easy {
+    background-color: var(--blue-color);
+    transition: .6s;
+}
+.navigate-buttons .easy:hover {
+    background-color: var(--blue-hover);
+    transform: scale(1.1);
 }
