@@ -29,3 +29,7 @@ StartTimer(TimeValue)
 const QuestionBtn = document.querySelector(".question-btn")
 
 QuestionBtn.addEventListener("click", ShowFlashcard)
+
+function PlayAudio() {
+    document.getElementById("voice").play()
+}
