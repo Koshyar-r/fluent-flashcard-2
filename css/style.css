@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 :root {
-    --persian-font: IRANMarker;
+    --persian-font: IRANSans;
     --english-font: 'Poppins', sans-serif;
     --english-font-weight: 500;
     --persian-font-weight: 600;
 
-    --primary-color: #095af0;
-    --primary-hover: #0a2d6d;
+    --primary-color: #6205ED;
+    --primary-hover: #8505CA;
     --white-color: #FFF;
     --yellow-color: #ffff00;
     --yellow-hover: #cfcf05;
@@ -16,8 +16,8 @@
     --blue-hover: #1eace4;
 }
 @font-face {
-    font-family: IRANMarker;
-    src: url(IRANMarker.ttf);
+    font-family: IRANSans;
+    src: url(IRANSans.ttf);
 }
 * {
     box-sizing: border-box;
@@ -28,12 +28,15 @@
     background-color: var(--primary-color);
     color: #FFF
 }
+img {
+    user-select: none;
+}
 body, button {
     font-family: var(--persian-font);
     font-weight: var(--persian-font-weight);
 }
 body {
-    background-color: #e5e5e5;
+    background-color: var(--primary-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +120,7 @@ section .word {
     border-radius: 5px;
     padding: 1.7rem;
     width: 350px;
-    height: 600px;
+    height: 620px;
     position: relative;
     display: none;
 }
@@ -127,15 +130,39 @@ section .word {
     text-align: center;
     font-size: 30px;
 }
-.img {
-    width: 170px;
-    user-select: none;
+.swiper {
+    width: 100%;
+    height: auto;
 }
-.flashcard-content {
+.swiper-slide {
     display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.swiper-slide img {
+    width: 170px;
+    height: auto;
+}
+.swiper-button-prev::after {
+    content: '';
+    color: var(--primary-color);
+}
+.swiper-button-next::after {
+    content: '';
+    color: var(--primary-color);
+}
+.swiper-pagination-bullet::after {
+    content: '';
+    color: var(--primary-color);
+}
+.flashcard-details {
+    position: relative;
+    top: 2rem;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
     gap: 1rem;
 }
 .answer {

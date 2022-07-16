@@ -1,3 +1,15 @@
+var swiper = new Swiper(".mySwiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true
+    },
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    }
+  });
+
 function ShowFlashcard() {
     document.querySelector(".flashcard").style.display="block"
     document.querySelector(".question-box").style.display="none"
